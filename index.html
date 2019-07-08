@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Star Wars RPG</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+  </head>
+
+  <body>
+    <div class="container-fluid p-0">
+      <div class="jumbotron pt-4 pb-4 bg-dark">
+        <h1 class="text-center text-light">Star Wars RPG</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" id="content">
+        <div class="col-md-2" id="kenobi-content">
+          <p class="text-center m-0">Obi-Wan Kenobi</p>
+          <img class="img-fluid" src="./assets/images/obiwankenobi.jpg" alt="Star Wars Character- Obi-Wan Kenobi">
+          <p>HP: <span id="kenobiHP-text"></span></p>
+        </div>
+
+        <div class="col-md-2" id="skywalker-content">
+          <p class="text-center m-0">Luke Skywalker</p>
+          <img class="img-fluid" src="./assets/images/lukeskywalker.jpg" alt="Star Wars Character- Luke Skywalker">
+          <p>HP: <span id="skywalkerHP-text"></span></p>
+        </div>
+
+        <div class="col-md-2" id="vader-content">
+          <p class="text-center m-0"> Darth Vader</p>
+          <img class="img-fluid" src="./assets/images/darthvader.jpg" alt="Star Wars Character- Darth Vader">
+          <p>HP: <span id="vaderHP-text"></span></p>
+        </div>
+
+        <div class="col-md-2" id="maul-content">
+          <p class="text-center m-0">Darth Maul</p>
+          <img class="img-fluid" src="./assets/images/darthmaul.jpg" alt="Star Wars Character- Darth Maul">
+          <p>HP: <span id="maulHP-text"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Your Character</h2>
+      <div class="container">
+        <div class="row" id="your-character"> 
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Enemies Available to Attack</h2>
+      <div class="container">
+        <div class="row" id="opp-character">
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+  </body>
+</html>
+
