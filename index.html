@@ -20,47 +20,54 @@
         <h1 class="text-center text-light">Star Wars RPG</h1>
       </div>
     </div>
+
     <div class="container">
-      <div class="row" id="content">
-        <div class="col-md-2" id="kenobi-content">
-          <p class="text-center m-0">Obi-Wan Kenobi</p>
+      <div class="row" id="players-content">
+        <div class="col-md-3">
+          <p>Obi-Wan Kenobi</p>
           <img class="img-fluid" src="./assets/images/obiwankenobi.jpg" alt="Star Wars Character- Obi-Wan Kenobi">
-          <p>HP: <span id="kenobiHP-text"></span></p>
+          <p id="kenobiHP-text"></p>
         </div>
 
-        <div class="col-md-2" id="skywalker-content">
-          <p class="text-center m-0">Luke Skywalker</p>
+        <div class="col-md-3">
+          <p>Luke Skywalker</p>
           <img class="img-fluid" src="./assets/images/lukeskywalker.jpg" alt="Star Wars Character- Luke Skywalker">
-          <p>HP: <span id="skywalkerHP-text"></span></p>
+          <p id="skywalkerHP-text"></p>
         </div>
 
-        <div class="col-md-2" id="vader-content">
-          <p class="text-center m-0"> Darth Vader</p>
+        <div class="col-md-3">
+          <p>Darth Vader</p>
           <img class="img-fluid" src="./assets/images/darthvader.jpg" alt="Star Wars Character- Darth Vader">
-          <p>HP: <span id="vaderHP-text"></span></p>
+          <p id="vaderHP-text"></p>
         </div>
 
-        <div class="col-md-2" id="maul-content">
-          <p class="text-center m-0">Darth Maul</p>
+        <div class="col-md-3">
+          <p>Darth Maul</p>
           <img class="img-fluid" src="./assets/images/darthmaul.jpg" alt="Star Wars Character- Darth Maul">
-          <p>HP: <span id="maulHP-text"></span></p>
+          <p id="maulHP-text"></p>
         </div>
       </div>
     </div>
 
-    <div>
-      <h2>Your Character</h2>
-      <div class="container">
-        <div class="row" id="your-character"> 
+ 
+    <div class="container">
+      <div class="row bg-light">
+        <div id="your-player" class="col-md-4">
+          <h4>Your Character</h4>
+        </div>
+        <div class="col-md-4 text-center">
+          <button id="attack">Attack</button>
+        </div>
+        <div id="def-player" class="col-md-4 text-right">
+          <h4>Defender</h4>
         </div>
       </div>
     </div>
+ 
 
-    <div>
-      <h2>Enemies Available to Attack</h2>
-      <div class="container">
-        <div class="row" id="opp-character">
-        </div>
+    <div class="container">
+      <h4>Enemies Available to Attack</h4>
+      <div class="row" id="opp-player">
       </div>
     </div>
 
