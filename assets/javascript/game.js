@@ -122,7 +122,7 @@
       $("#def-player>div").remove();
       $("#attack").off("click");
       $("#opp-player>div").on("click");
-      $("#comments").html("Select your opponent");
+      $("#comments").html("Select next opponent");
       opponents();
     }
 
@@ -131,6 +131,8 @@
       $("#your-player>div").remove();
       $(".attack").off("click");
       $("#replay").show();
+      $("#attack").hide();
+      $("#comments").html("damn you lost");
       $("#replay").click(function() {
       replay();
       });
@@ -142,6 +144,8 @@
     if($("#opp-player>div").length == 0 && $("#def-player>div").length == 0) {
       $(".attack").off("click");
       $("#replay").show();
+      $("#attack").hide();
+      $("#comments").html("woohoo!! you won");
       $("#replay").click(function() {
       replay();
       });

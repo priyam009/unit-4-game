@@ -6,14 +6,18 @@
 
 
 body {
-  background: url(../images/starwarsback.png);
   background-size: cover;
   color: #967926;
   font-family: Starjout;
+  background: url(../images/starwarsbackground.png);
 }
 
 .heading {
   background-color: rgb(21, 21, 21);
+}
+
+.heading h1 {
+  font-size: 65px;
 }
 
 img {
@@ -25,6 +29,5 @@ img {
 .attack-btn {
   position: relative;
   top: 150px;
-  /* width: 200px; */
 }
 
