@@ -1,0 +1,30 @@
+@font-face {
+  font-family: Starjout;
+  src: url(../font/Starjout.ttf);
+}
+
+
+
+body {
+  background: url(../images/starwarsback.png);
+  background-size: cover;
+  color: #967926;
+  font-family: Starjout;
+}
+
+.heading {
+  background-color: rgb(21, 21, 21);
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+
+.attack-btn {
+  position: relative;
+  top: 150px;
+  /* width: 200px; */
+}
+

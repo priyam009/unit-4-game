@@ -15,9 +15,11 @@
   </head>
 
   <body>
-    <div class="container-fluid p-0">
-      <div class="jumbotron pt-4 pb-4 bg-dark">
-        <h1 class="text-center text-light">Star Wars RPG</h1>
+    <div class="container-fluid p-0 ">
+      <div class="jumbotron pt-0 pb-0 mb-2 text-center heading">
+        <h1>Star Wars RPG</h1>
+        <h4 class="p-0 m-0">Let the game begin!!</h4>
+        <p id="comments" class="pb-2 pt-2 m-0"></p>
       </div>
     </div>
 
@@ -51,12 +53,12 @@
 
  
     <div class="container">
-      <div class="row bg-light">
+      <div class="row">
         <div id="your-player" class="col-md-4">
-          <h4>Your Character</h4>
+          <h4>Attacker</h4>
         </div>
-        <div class="col-md-4 text-center">
-          <button id="attack">Attack</button>
+        <div class="col-md-4 text-center" id="action-area">
+          <button id="attack" style="width: 200px">Attack</button>
         </div>
         <div id="def-player" class="col-md-4 text-right">
           <h4>Defender</h4>
@@ -69,6 +71,10 @@
       <h4>Enemies Available to Attack</h4>
       <div class="row" id="opp-player">
       </div>
+    </div>
+
+    <div>
+      <button id="replay">Replay</button>
     </div>
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>

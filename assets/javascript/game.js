@@ -1,4 +1,4 @@
-$(document).ready(function() {
+
 
 //Declaring Variables
 
@@ -30,23 +30,31 @@ $(document).ready(function() {
   var yourAP;
   var defCAP;
 
-
 //----------------------------------------------------
 
 //functions
 
   function initialize() {
-
     $("#kenobiHP-text").html("HP: " + players["Obi-Wan Kenobi"]["hp"]);
     $("#skywalkerHP-text").html("HP: " + players["Luke Skywalker"]["hp"]);
     $("#vaderHP-text").html("HP: " + players["Darth Vader"]["hp"]);
     $("#maulHP-text").html("HP: " + players["Darth Maul"]["hp"]);
 
+    $("#comments").html("Select your Player");
+
+    yourAP=0;
+    $("#replay").hide();
+
+    myPlayer();
+  };
+
+  function myPlayer() {
     $("#players-content>div").click(function() {
       $("#your-player").append(this);
       $("#your-player>div").removeClass("col-md-3");
-      // $("#your-player>div>p:first").addClass("yourName");
       $("#your-player>div").addClass("yourContent");
+      $("#action-area>button").addClass("attack-btn");
+
 
       yourName = $(".yourContent>p:first").text();
       yourHP = players[yourName]["hp"];
@@ -57,6 +65,7 @@ $(document).ready(function() {
       $("#players-content>div").each(function() {
         $("#opp-player").append(this);
       });
+      $("#comments").html("Select your opponent");
 
       opponents();
     });
@@ -66,24 +75,20 @@ $(document).ready(function() {
     $("#opp-player>div").click(function() {
       $("#def-player").append(this);
       $("#def-player>div").removeClass("col-md-3");
-      // $("#def-player>div>p:first").addClass("defName");
       $("#def-player>div").addClass("defContent");
+    
+
 
       defName = $(".defContent>p:first").text();
-
-      // console.log("defName",defName);
 
       $("#opp-player>div").off("click");
 
       defHP = players[defName]["hp"];
       defCAP = players[defName]["cap"];
 
-      // console.log("yourHP", yourHP);
-      // console.log("defHP", defHP);
-      // console.log("defCAP", defCAP);
-      // console.log("----------");
+      $("#comments").html("Attack Attack Attack!!!");
 
-      $("#attack").on("click");
+      $(".attack").on("click");
       attackPlayer();
 
     });
@@ -103,25 +108,52 @@ $(document).ready(function() {
       console.log("yourAP", yourAP);
       console.log("----------");
 
-      checkResult();
+      checkLost();
+      checkWin();
+
     });
+
   };
 
-  function checkResult() {
+  function checkLost() {
+    
+    //Defeated one opponent
     if(defHP <= 0) {
       $("#def-player>div").remove();
       $("#attack").off("click");
       $("#opp-player>div").on("click");
+      $("#comments").html("Select your opponent");
       opponents();
     }
 
+    //You Lose
     else if(yourHP <= 0) {
       $("#your-player>div").remove();
-      $("#attack").off("click");
-      initialize();
-    };
-  }
+      $(".attack").off("click");
+      $("#replay").show();
+      $("#replay").click(function() {
+      replay();
+      });
+    }
+  };
 
+  //You Win
+  function checkWin() {
+    if($("#opp-player>div").length == 0 && $("#def-player>div").length == 0) {
+      $(".attack").off("click");
+      $("#replay").show();
+      $("#replay").click(function() {
+      replay();
+      });
+    }
+  };
+
+  function replay() {
+    location.reload(true);
+  };
+
+
+
+$(document).ready(function() {
   initialize();
-
 });
